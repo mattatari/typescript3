@@ -137,6 +137,7 @@ type User = {
 
 let yo = new Hello(matt);
 yo.function_get_name();
+console.log("ha ha");
 
 
 wagTail("sparky");

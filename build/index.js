@@ -16,21 +16,17 @@ exports.Hello = void 0;
 const dog_1 = require("./dog");
 const axios_1 = __importDefault(require("axios"));
 //-----------------------------------------------
-//-----------------------------
 class Hello {
-    //---------------------------------
     constructor(person) {
         this.firstName = person.firstName;
         this.lastName = person.lastName;
     }
     //----------end function constructor
-    //---------------------------------
     function_get_name() {
         //console.log(`hello there ${this.firstName} the angle is ${this.function_convert_to_degrees(Math.asin(0.5))}`);
         console.log(`distance = ${this.function_calculate_ballistic_distance(1000, 30, 100)}`);
     }
-    //----------end function getName
-    //---------------------------------
+    //----------end function_get_name
     function_calculate_ballistic_distance(velocity, angle, height = 0) {
         let a1 = (velocity * Math.cos((angle * Math.PI / 180)) / 9.8);
         console.log(`a1 = ${a1}`);
@@ -42,8 +38,7 @@ class Hello {
         let ballistic_distance = parseInt(a4, 10);
         return ballistic_distance;
     }
-    //----------end function convertToDegrees
-    //---------------------------------
+    //-----------end function_calculate_ballistic_distance
     function_convert_to_degrees(radians) {
         return parseInt((radians * 180 / Math.PI).toFixed(0));
     }
@@ -84,4 +79,5 @@ function getUsers() {
 getUsers();
 let yo = new Hello(matt);
 yo.function_get_name();
+console.log("ha ha");
 (0, dog_1.wagTail)("sparky");
