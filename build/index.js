@@ -23,7 +23,7 @@ class Hello {
     }
     //----------end function constructor
     function_get_name() {
-        //console.log(`hello there ${this.firstName} the angle is ${this.function_convert_to_degrees(Math.asin(0.5))}`);
+        //console.log(`hello there ${this.firstName} the angle is ${this.function_convert_to_degrees(Math.asin(0.5))}`)
         console.log(`distance = ${this.function_calculate_ballistic_distance(1000, 30, 100)}`);
     }
     //----------end function_get_name

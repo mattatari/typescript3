@@ -1,6 +1,6 @@
-import {wagTail} from "./dog";
+import {wagTail} from "./dog"
 
-import axios from 'axios';
+import axios from 'axios'
 
 //-----------------------------------------------
 interface Person {
@@ -16,14 +16,14 @@ interface Person {
 
 
 export class Hello {
-    firstName: string;
-    lastName: string;
+    firstName: string
+    lastName: string
     
     
     
     public constructor(person:Person) {
-        this.firstName = person.firstName;
-        this.lastName = person.lastName;
+        this.firstName = person.firstName
+        this.lastName = person.lastName
     }
     //----------end function constructor
 
@@ -33,9 +33,9 @@ export class Hello {
     
     
     public function_get_name(): void {
-        //console.log(`hello there ${this.firstName} the angle is ${this.function_convert_to_degrees(Math.asin(0.5))}`);
+        //console.log(`hello there ${this.firstName} the angle is ${this.function_convert_to_degrees(Math.asin(0.5))}`)
 
-        console.log(`distance = ${this.function_calculate_ballistic_distance(1000,30,100)}`);
+        console.log(`distance = ${this.function_calculate_ballistic_distance(1000,30,100)}`)
     }
     //----------end function_get_name
 
@@ -47,20 +47,20 @@ export class Hello {
     
     public function_calculate_ballistic_distance(velocity:number, angle:number, height:number = 0):number {
 
-        let a1:number = (velocity * Math.cos((angle * Math.PI / 180)) / 9.8);
-        console.log(`a1 = ${a1}`);
+        let a1:number = (velocity * Math.cos((angle * Math.PI / 180)) / 9.8)
+        console.log(`a1 = ${a1}`)
 
-        let a2:number = velocity * Math.sin((angle * Math.PI / 180));
-        console.log(`a2 = ${a2}`);
+        let a2:number = velocity * Math.sin((angle * Math.PI / 180))
+        console.log(`a2 = ${a2}`)
 
-        let a3:number = Math.sqrt( (Math.pow(a2,2)) + (2 * 9.8 * height));
-        console.log(`a3 = ${a3}`);
+        let a3:number = Math.sqrt( (Math.pow(a2,2)) + (2 * 9.8 * height))
+        console.log(`a3 = ${a3}`)
 
-        let a4:string = (a1 * (a2 + a3)).toFixed(0);
+        let a4:string = (a1 * (a2 + a3)).toFixed(0)
 
-        let ballistic_distance:number = parseInt(a4,10);
+        let ballistic_distance:number = parseInt(a4,10)
 
-        return ballistic_distance;
+        return ballistic_distance
     }
     //-----------end function_calculate_ballistic_distance
 
@@ -71,7 +71,7 @@ export class Hello {
 
     
     public function_convert_to_degrees(radians:number):number {
-        return parseInt((radians * 180 / Math.PI).toFixed(0));
+        return parseInt((radians * 180 / Math.PI).toFixed(0))
     }
     //----------end function_convert_to_degrees
 
@@ -130,14 +130,14 @@ type User = {
     }
   }
   
-  getUsers();
+  getUsers()
 
 
 
 
-let yo = new Hello(matt);
-yo.function_get_name();
-console.log("ha ha");
+let yo = new Hello(matt)
+yo.function_get_name()
+console.log("ha ha")
 
 
-wagTail("sparky");
+wagTail("sparky")
