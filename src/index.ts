@@ -92,14 +92,14 @@ const matt: Person = {
 
 
 type User = {
-    id: number;
-    email: string;
-    first_name: string;
-  };
+    id: number
+    email: string
+    first_name: string
+  }
   
   type GetUsersResponse = {
-    data: User[];
-  };
+    data: User[]
+  }
   
   async function getUsers() {
     try {
@@ -111,21 +111,21 @@ type User = {
             Accept: 'application/json',
           },
         },
-      );
+      )
   
-      console.log(JSON.stringify(data, null, 4));
+      console.log(JSON.stringify(data, null, 4))
   
       // 👇️ "response status is: 200"
-      console.log('response status is: ', status);
+      console.log('response status is: ', status)
   
-      return data;
+      return data
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        console.log('error message: ', error.message);
-        return error.message;
+        console.log('error message: ', error.message)
+        return error.message
       } else {
-        console.log('unexpected error: ', error);
-        return 'An unexpected error occurred';
+        console.log('unexpected error: ', error)
+        return 'An unexpected error occurred'
       }
     }
   }
